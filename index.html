@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+  <body>
+    <div class="order">
+      <div class="container">
+        <h1 class="title">Заказ</h1>
+          <form action="mailer/smart.php" method="post" class="order-form rf">
+            <div class="row">
+              <!-- 1.2.	Раскрывающийся список  -->
+              <div class="col-12 col-md-6 col-lg-4 form-block">
+                <div class="form-title">Выберите вид спорта</div>
+                <select class="sport">
+                  <option value="1">Художественная гимнастика</option>
+                  <option value="2">Спортивная гимнастика</option>
+                  <option value="3">Фигурное катание</option>
+                </select>
+              </div>
+              <!-- /.form-block -->
+
+              <!-- 1.3. Поле «Вид заказа» -->
+              <div class="col-12 col-md-6 col-lg-4 form-block">
+                <div class="form-title">Вид заказа</div>
+
+                <label>
+                  <input class="form-input radio" value="individ" type="radio" name="kind-order">
+                  <span class="radio-custom"></span>
+                  <span class="label">Индивидуальный</span>
+                </label>
+
+                <label>
+                  <input class="form-input radio" value="group" type="radio" name="kind-order">
+                  <span class="radio-custom"></span>
+                  <span class="label">Групповой</span>
+                </label>
+
+              </div>
+              <!-- /.form-block -->
+
+              <!-- 1.4. Поле «Укажите количество человек в группе» -->
+              <div class="col-12 col-md-6 col-lg-4 form-block form-block_number">
+                <div class="form-title">Укажите количество человек в группе</div>
+                <input class="form-input rfield" type="number" placeholder="Введите число">
+              </div>
+              <!-- /.form-block -->
+            </div>
+            <!-- /.row -->
+            
+            <div class="row">
+              <!-- 1.5. Группа раскрывающихся списков -->
+              <div class="col-12 col-sm-6 form-block">
+                <div class="form-title">Выберите изделие</div>
+
+                <div class="form-block-1">
+                  <label for="product_1">Художественная гимнастика</label>
+                  <select class="form-control" id="product_1">
+                    <option>Купальник</option>
+                    <option>Комбинезон</option>
+                    <option>Другое (укажу в комментариях)</option>
+                  </select>
+                </div>
+                <!-- /.form-block-1 -->
+
+                <div class="form-block-2">
+                  <label for="product_2">Спортивная гимнастика</label>
+                  <select class="form-control" id="product_2">
+                    <option>Купальник</option>
+                    <option>Лосины</option>
+                    <option>Другое (укажу в комментариях)</option>
+                  </select>
+                </div>
+                <!-- /.form-block-2 -->
+
+                <div class="form-block-3">
+                  <label for="product_3">Фигурное катание</label>
+                  <select class="form-control" id="product_3">
+                    <option>Платье</option>
+                    <option>Комбинезон</option>
+                    <option>Рубашка</option>
+                    <option>Брюки</option>
+                    <option>Другое (укажу в комментариях)</option>
+                  </select>
+                </div>
+                <!-- /.form-block-3 -->
+              </div>
+              <!-- /.form-block -->
+
+              <!-- 1.6. Группа радио кнопок -->
+              <div class="col-12 col-sm-6 form-block">
+                <div class="form-title">Укажите пол</div>
+
+                <label>
+                  <input class="form-input radio" type="radio" name="sex">
+                  <span class="radio-custom"></span>
+                  <span class="label">Мужской</span>
+                </label>
+
+                <label>
+                  <input class="form-input radio" type="radio" name="sex">
+                  <span class="radio-custom"></span>
+                  <span class="label">Женский</span>
+                </label>
+              </div>
+              <!-- /.form-block -->
+            </div>
+            <!-- /.row -->
+            
+            <!-- 1.7. Группа строк -->
+            <div class="form-block">
+              <div class="form-title">Заполните ваши мерки</div>
+              <div class="row">
+                <div class="col-12 col-sm-6 form-block_size">
+                  <label for="size_1">Рост</label>
+                  <input class="form-input rfield mask" type="text" id="size_1" placeholder="Рост">
+                </div>
+                <!-- /.col-6 -->
+
+                <div class="col-12 col-sm-6 form-block_size">
+                  <label for="size_2">Обхват туловища</label>
+                  <input class="form-input rfield mask" type="text" id="size_2" placeholder="Обхват туловища">
+                </div>
+                <!-- /.col-6 -->
+
+                <div class="col-12 col-sm-6 form-block_size">
+                  <label for="size_3">Обхват груди</label>
+                  <input class="form-input rfield mask" type="text" id="size_3" placeholder="Обхват груди">
+                </div>
+                <!-- /.col-6 -->
+
+                <div class="col-12 col-sm-6 form-block_size">
+                  <label for="size_4">Обхват талии</label>
+                  <input class="form-input rfield mask" type="text" id="size_4" placeholder="Обхват талии">
+                </div>
+                <!-- /.col-6 -->
+
+                <div class="col-12 col-sm-6 form-block_size">
+                  <label for="size_5">Обхват бедер</label>
+                  <input class="form-input rfield mask" type="text" id="size_5" placeholder="Обхват бедер">
+                </div>
+                <!-- /.col-6 -->
+
+                <div class="col-12 col-sm-6 form-block_size">
+                  <label for="size_6">Обхват шеи</label>
+                  <input class="form-input rfield mask" type="text" id="size_6" placeholder="Обхват шеи">
+                </div>
+                <!-- /.col-6 -->
+
+                <div class="col-12 col-sm-6 form-block_size">
+                  <label for="size_7">Ширина плеча</label>
+                  <input class="form-input rfield mask" type="text" id="size_7" placeholder="Ширина плеча">
+                </div>
+                <!-- /.col-6 -->
+
+                <div class="col-12 col-sm-6 form-block_size">
+                  <label for="size_8">Обхват плеча</label>
+                  <input class="form-input rfield mask" type="text" id="size_8" placeholder="Обхват плеча">
+                </div>
+                <!-- /.col-6 -->
+              </div>
+              <!-- /.row -->
+            </div>
+            <!-- /.form-block -->
+
+            <div class="row">
+              <!-- 3. Поле типа вложение файла -->
+              <div class="col-12 col-md-5 form-block">
+                <div class="form-title">Добавьте фото:</div>
+                <small class="form-small">Добавьте эскизы или фотографии</small>
+                <div class="file-upload">
+                  <label>
+                    <input class="form-input" type="file" name="file">
+                    <span>Нажмите, чтобы добавить фото</span>
+                  </label>
+                </div>
+                <input class="filename" type="text" id="filename" disabled>
+              </div>
+              <!-- /.form-block -->
+
+              <!-- 4.	Поле типа комментарий  -->
+              <div class="col-12 col-md-7 form-block">
+                <div class="form-title">Добавьте описание заказа</div>
+                <textarea class="form-textarea rfield"></textarea>
+              </div>
+              <!-- /.form-block -->
+            </div>
+            <!-- /.row -->
+            
+            <div class="form-block__button">
+              <button type="button" class="button button-add">Добавить изделие на следующего человека</button>
+              <button type="submit" class="button btn_submit disabled">Оформить заказ</button>
+            </div>
+            <!-- /.from-block -->
+            
+
+          </form>
+          <!-- /.form -->
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- /.order -->
+
+    
+    <!-- Bootstrap grid CSS -->
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+    
+    <!-- Custome styles for this template -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
